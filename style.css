@@ -48,7 +48,9 @@
     border: solid grey 0;
     padding-top: 12px;
 }
-
+.navigationMob{
+    display: none;
+}
 .download{
     width: 190px;
     height: 40px;
@@ -100,7 +102,7 @@
     background-color: rgba(61, 61, 61, 0.8);;
     border-radius: 5px;
     width: 90%;
-    min-height: 500px;
+    min-height: 450px;
     top: 240px;
     left: 5%;
 }
@@ -127,7 +129,7 @@
     font-family: 'Open Sans Condensed', sans-serif;
     opacity: 1;
 }
-@media (max-width: 360px){
+@media (max-width: 420px){
     .title{
         font-size: 30px;
     }
@@ -167,7 +169,8 @@
         padding-top: 7px;
     }
     .main{
-        height: 214px;
+        min-height: 214px;
+        max-height: 300px;
     }
     .modalka{
         margin-top: 70px;
