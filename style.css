@@ -129,7 +129,7 @@
     font-family: 'Open Sans Condensed', sans-serif;
     opacity: 1;
 }
-@media (max-width: 420px){
+@media (max-width: 500px){
     .title{
         font-size: 30px;
     }
