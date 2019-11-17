@@ -1,9 +1,14 @@
-let homeBut =  document.querySelectorAll('.navigation a')[0];
-let aboutBut =  document.querySelectorAll('.navigation a')[1];
-let cyberBut =  document.querySelectorAll('.navigation a')[2];
-let contactBut =  document.querySelectorAll('.navigation a')[3];
+let homeBut =  document.querySelectorAll('.navBut')[0];
+let aboutBut =  document.querySelectorAll('.navBut')[1];
+let cyberBut =  document.querySelectorAll('.navBut')[2];
+let contactBut =  document.querySelectorAll('.navBut')[3];
 
-let buttons = document.querySelectorAll('.navigation a');
+let homeButM =  document.querySelectorAll('.navBut')[4];
+let aboutButM =  document.querySelectorAll('.navBut')[5];
+let cyberButM =  document.querySelectorAll('.navBut')[6];
+let contactButM =  document.querySelectorAll('.navBut')[7];
+
+let buttons = document.querySelectorAll('.navBut');
 
 let enigma = document.querySelector('.title');
 let log = document.querySelector('.subtitle');
@@ -161,4 +166,155 @@ contactBut.addEventListener("click",()=>{
         download.classList.add('none');
     }  
 });
+
+
+homeButM.addEventListener("click",()=>{
+    let t = true;
+    for(let i = 1; i < modals.length; i++){
+        if(!modals[i].classList.contains('none')){
+            modals[i].classList.add('none');
+        }
+    }
+    for(let i = 0; i < buttons.length; i++){
+        if(i==4){
+            continue;
+        }
+        if(buttons[i].classList.contains('yellow')){
+            buttons[i].classList.remove('yellow');
+        }
+    }
+    modals[0].classList.toggle('none');
+    homeButM.classList.toggle('yellow');
+    for(let i = 0; i < modals.length; i++){
+        if(!modals[i].classList.contains('none')){
+            t = false;
+            break;
+        }
+    }
+    if(t){
+        enigma.classList.remove('none');
+        log.classList.remove('none');
+        download.classList.remove('none');  
+    }
+    else{
+        enigma.classList.add('none');
+        log.classList.add('none');
+        download.classList.add('none');
+    }    
+});
+
+aboutButM.addEventListener("click",()=>{
+    let t = true;
+    for(let i = 0; i < modals.length; i++){
+        if(i==1){
+            continue;
+        }
+        if(!modals[i].classList.contains('none')){
+            modals[i].classList.add('none');
+        }
+    }
+    for(let i = 0; i < buttons.length; i++){
+        if(i==5){
+            continue;
+        }
+        if(buttons[i].classList.contains('yellow')){
+            buttons[i].classList.remove('yellow');
+        }
+    }
+    modals[1].classList.toggle('none');
+    aboutButM.classList.toggle('yellow');
+    for(let i = 0; i < modals.length; i++){
+        if(!modals[i].classList.contains('none')){
+            t = false;
+            break;
+        }
+    }
+    if(t){
+        enigma.classList.remove('none');
+        log.classList.remove('none');
+        download.classList.remove('none');  
+    }
+    else{
+        enigma.classList.add('none');
+        log.classList.add('none');
+        download.classList.add('none');
+    }  
+});
+
+cyberButM.addEventListener("click",()=>{
+    let t = true;
+    for(let i = 0; i < modals.length; i++){
+        if(i==2){
+            continue;
+        }
+        if(!modals[i].classList.contains('none')){
+            modals[i].classList.add('none');
+        }
+    }
+    for(let i = 0; i < buttons.length; i++){
+        if(i==6){
+            continue;
+        }
+        if(buttons[i].classList.contains('yellow')){
+            buttons[i].classList.remove('yellow');
+        }
+    }
+    modals[2].classList.toggle('none');
+    cyberButM.classList.toggle('yellow');
+    for(let i = 0; i < modals.length; i++){
+        if(!modals[i].classList.contains('none')){
+            t = false;
+            break;
+        }
+    }
+    if(t){
+        enigma.classList.remove('none');
+        log.classList.remove('none');
+        download.classList.remove('none');  
+    }
+    else{
+        enigma.classList.add('none');
+        log.classList.add('none');
+        download.classList.add('none');
+    }  
+});
+
+contactButM.addEventListener("click",()=>{
+    let t = true;
+    for(let i = 0; i < modals.length; i++){
+        if(i==3){
+            continue;
+        }
+        if(!modals[i].classList.contains('none')){
+            modals[i].classList.add('none');
+        }
+    }
+    for(let i = 0; i < buttons.length; i++){
+        if(i==7){
+            continue;
+        }
+        if(buttons[i].classList.contains('yellow')){
+            buttons[i].classList.remove('yellow');
+        }
+    }
+    modals[3].classList.toggle('none');
+    contactButM.classList.toggle('yellow');
+    for(let i = 0; i < modals.length; i++){
+        if(!modals[i].classList.contains('none')){
+            t = false;
+            break;
+        }
+    }
+    if(t){
+        enigma.classList.remove('none');
+        log.classList.remove('none');
+        download.classList.remove('none');  
+    }
+    else{
+        enigma.classList.add('none');
+        log.classList.add('none');
+        download.classList.add('none');
+    }  
+});
+
 
