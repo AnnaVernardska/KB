@@ -136,6 +136,10 @@
         display: block;
         background-color: white;
     }
+    .logo{
+        width: 330px;
+        margin: auto;
+    }
     body{
         background-color: rgb(44, 43, 43);
     }
