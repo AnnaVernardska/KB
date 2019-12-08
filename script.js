@@ -22,7 +22,6 @@ let modal4 = document.querySelectorAll('.modalka')[3];
 let modals = [modal1, modal2, modal3, modal4];
 
 homeBut.addEventListener("click",()=>{
-    let t = true;
     for(let i = 1; i < modals.length; i++){
         if(!modals[i].classList.contains('none')){
             modals[i].classList.add('none');
@@ -33,24 +32,11 @@ homeBut.addEventListener("click",()=>{
             buttons[i].classList.remove('yellow');
         }
     }
-    modals[0].classList.toggle('none');
-    homeBut.classList.toggle('yellow');
-    for(let i = 0; i < modals.length; i++){
-        if(!modals[i].classList.contains('none')){
-            t = false;
-            break;
-        }
-    }
-    if(t){
-        enigma.classList.remove('none');
-        log.classList.remove('none');
-        download.classList.remove('none');  
-    }
-    else{
-        enigma.classList.add('none');
-        log.classList.add('none');
-        download.classList.add('none');
-    }    
+    homeBut.classList.add('yellow');
+    
+    enigma.classList.remove('none');
+    log.classList.remove('none');
+    download.classList.remove('none');   
 });
 
 aboutBut.addEventListener("click",()=>{
@@ -82,7 +68,8 @@ aboutBut.addEventListener("click",()=>{
     if(t){
         enigma.classList.remove('none');
         log.classList.remove('none');
-        download.classList.remove('none');  
+        download.classList.remove('none');
+        homeBut.classList.add('yellow');  
     }
     else{
         enigma.classList.add('none');
@@ -120,7 +107,8 @@ cyberBut.addEventListener("click",()=>{
     if(t){
         enigma.classList.remove('none');
         log.classList.remove('none');
-        download.classList.remove('none');  
+        download.classList.remove('none');
+        homeBut.classList.add('yellow');  
     }
     else{
         enigma.classList.add('none');
@@ -158,7 +146,8 @@ contactBut.addEventListener("click",()=>{
     if(t){
         enigma.classList.remove('none');
         log.classList.remove('none');
-        download.classList.remove('none');  
+        download.classList.remove('none');
+        homeBut.classList.add('yellow');  
     }
     else{
         enigma.classList.add('none');
@@ -169,7 +158,6 @@ contactBut.addEventListener("click",()=>{
 
 
 homeButM.addEventListener("click",()=>{
-    let t = true;
     for(let i = 1; i < modals.length; i++){
         if(!modals[i].classList.contains('none')){
             modals[i].classList.add('none');
@@ -183,24 +171,11 @@ homeButM.addEventListener("click",()=>{
             buttons[i].classList.remove('yellow');
         }
     }
-    modals[0].classList.toggle('none');
     homeButM.classList.toggle('yellow');
-    for(let i = 0; i < modals.length; i++){
-        if(!modals[i].classList.contains('none')){
-            t = false;
-            break;
-        }
-    }
-    if(t){
-        enigma.classList.remove('none');
-        log.classList.remove('none');
-        download.classList.remove('none');  
-    }
-    else{
-        enigma.classList.add('none');
-        log.classList.add('none');
-        download.classList.add('none');
-    }    
+    
+    enigma.classList.remove('none');
+    log.classList.remove('none');
+    download.classList.remove('none');   
 });
 
 aboutButM.addEventListener("click",()=>{
@@ -232,7 +207,8 @@ aboutButM.addEventListener("click",()=>{
     if(t){
         enigma.classList.remove('none');
         log.classList.remove('none');
-        download.classList.remove('none');  
+        download.classList.remove('none'); 
+        homeButM.classList.add('yellow'); 
     }
     else{
         enigma.classList.add('none');
@@ -271,6 +247,7 @@ cyberButM.addEventListener("click",()=>{
         enigma.classList.remove('none');
         log.classList.remove('none');
         download.classList.remove('none');  
+        homeButM.classList.add('yellow'); 
     }
     else{
         enigma.classList.add('none');
@@ -308,7 +285,8 @@ contactButM.addEventListener("click",()=>{
     if(t){
         enigma.classList.remove('none');
         log.classList.remove('none');
-        download.classList.remove('none');  
+        download.classList.remove('none'); 
+        homeButM.classList.add('yellow');  
     }
     else{
         enigma.classList.add('none');
